@@ -1,0 +1,61 @@
+<mat-tab-group mat-align-tabs="center">
+  <mat-tab label="Noticias">
+<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap  fxLayoutGap="0.5%" fxLayoutAlign="center">
+   
+  <cdk-virtual-scroll-viewport [itemSize]="18 * 7" class="example-viewport">
+    <div *cdkVirtualFor="let noticia of noticias
+                         let index = index;
+                         let count = count;
+                         let first = first;
+                         let last = last;
+                         let even = even;
+                         let odd = odd;" [class.example-alternate]="odd">
+                         <mat-card class="example-card">
+                          <mat-card-header>
+                            <mat-card-title  fxLayout.gt-xs="row" fxLayout.xs="column">
+                                <span fxFlex="80%">{{noticia.title}}</span>
+                            </mat-card-title>
+                            <mat-card-subtitle>Author {{noticia.author}}</mat-card-subtitle>
+                          </mat-card-header>
+                          <img mat-card-image src={{noticia.urlToImage}}>
+                          <mat-card-content>
+                            <p>
+                              {{noticia.description}}
+                            </p>
+                          </mat-card-content>
+                          <mat-card-actions>
+                           
+                            <button mat-button routerLink="detail/{{noticia.title}}" color="primary">DETALLES</button>
+                          </mat-card-actions>
+                        </mat-card>
+    </div>
+  </cdk-virtual-scroll-viewport>
+  
+  
+      
+</div>
+  </mat-tab>
+  <mat-tab label="El tiempo"> 
+    <div *ngFor="let tiempo of tiempos">
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap  fxLayoutGap="0.5%" fxLayoutAlign="center">
+      
+     
+      <div class="col-lg-6">
+        <mat-card class="example-card" style="background: aquamarine;">
+            <p>
+              Velocidad del viento: <strong> {{tiempo.wind.speed}}</strong>
+            </p>
+          </mat-card>
+            </div>
+             
+              <div class="col-lg-6">
+                <mat-card class="example-card" style="background: aquamarine;">
+                <p>
+                  Horario: <strong>{{tiempo.dt_txt}}</strong>
+                </p>
+              </mat-card>
+                </div>   
+    </div>
+    </div></mat-tab>
+  <mat-tab *ngIf="roles == 'administrador'" label="Trazas"><app-traza-list></app-traza-list></mat-tab>
+</mat-tab-group>

@@ -1,0 +1,44 @@
+<mat-tab-group mat-align-tabs="start">
+    <mat-tab label="Hora actual">
+        <div class="clock">
+            <!-- HOUR -->
+            <div>
+              <p class="placeholder">{{hour}}</p>
+            </div>
+          
+            <div>
+              <p>:</p>
+            </div>
+          
+            <!-- MINUTE -->
+            <div>
+              <p class="placeholder">{{minute}}</p>
+            </div>
+          
+            <div>
+              <p>:</p>
+            </div>
+          
+            <!-- SECOND -->
+            <div>
+              <p class="placeholder">{{second}}</p>
+            </div>
+
+              <!--Day -->
+            <div class="am-pm">
+              <div>
+                <p>{{today | date:'fullDate'}}</p>
+              </div>
+          
+              <!-- AM/PM -->
+              <div>
+                <p>{{ampm}}</p>
+              </div>
+            </div>
+          
+          </div>
+    </mat-tab>
+    <mat-tab label="Cron&oacute;metro">
+        <app-cronometro></app-cronometro>
+    </mat-tab>
+  </mat-tab-group>

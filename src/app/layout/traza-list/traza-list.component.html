@@ -1,0 +1,24 @@
+<table mat-table [dataSource]="dataSource">
+
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef>Correo</th>
+      <td mat-cell *matCellDef="let element"> {{element.emailUser}} </td>
+    </ng-container>
+  
+   
+    <ng-container matColumnDef="fecha">
+      <th mat-header-cell *matHeaderCellDef>Fecha</th>
+      <td mat-cell *matCellDef="let element"> {{element.fecha}} </td>
+    </ng-container>
+  
+  
+    <ng-container matColumnDef="url">
+      <th mat-header-cell *matHeaderCellDef> Url de la noticia</th>
+      <td mat-cell *matCellDef="let element"> {{element.urlNotice}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  
+  

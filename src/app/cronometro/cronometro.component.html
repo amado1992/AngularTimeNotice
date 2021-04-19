@@ -1,0 +1,41 @@
+<section>
+    <div class="example-button-row">
+        <button (click)='startCronometro()' mat-mini-fab color="primary" aria-label="Example icon start">
+            <mat-icon>play_circle</mat-icon>
+        </button>
+        
+        <button (click)='pauseCronometro()' mat-mini-fab color="primary" aria-label="Example icon pause">
+            <mat-icon>pause</mat-icon>
+        </button>
+
+        <button (click)='resetCronometro()' mat-mini-fab color="primary" aria-label="Example icon restart">
+            <mat-icon>restart_alt</mat-icon>
+        </button>
+        
+    </div>
+
+      <div class="cronometro">
+         <!-- MINUTE -->
+        <div>
+          <p class="placeholder">{{minute}}</p>
+        </div>
+      
+        <div>
+          <p>:</p>
+        </div>
+      
+        <!-- SECOND -->
+        <div>
+          <p class="placeholder">{{second}}</p>
+        </div>
+      
+        <div>
+          <p>:</p>
+        </div>
+      
+        <!-- MILISECOND -->
+        <div>
+          <p class="placeholder">{{miliSecond}}</p>
+        </div>
+      </div>
+  </section>

@@ -1,0 +1,76 @@
+<h1>Mi librer&iacute;a</h1>
+<div class="clock">
+  <h3> Hora actual</h3>
+  <!-- HOUR -->
+  <div>
+    <p class="placeholder">{{hour}}</p>
+  </div>
+
+  <div>
+    <p>:</p>
+  </div>
+
+  <!-- MINUTE -->
+  <div>
+    <p class="placeholder">{{minute}}</p>
+  </div>
+
+  <div>
+    <p>:</p>
+  </div>
+
+  <!-- SECOND -->
+  <div>
+    <p class="placeholder">{{second}}</p>
+  </div>
+
+    <!-- AM/PM -->
+    <div>
+      <p>{{ampm}}</p>
+    </div>
+  </div>
+
+
+<!--Cronometro-->
+  <section>
+    <h3>Cron&oacute;metro</h3>
+    <div class="example-button-row">
+        <button (click)='startCronometro()'>
+            Start
+        </button>
+        
+        <button (click)='pauseCronometro()'>
+            Pause
+        </button>
+
+        <button (click)='resetCronometro()'>
+            Restart
+        </button>
+        
+    </div>
+
+      <div class="cronometro">
+         <!-- MINUTE -->
+        <div>
+          <p class="placeholder">{{minuteNext}}</p>
+        </div>
+      
+        <div>
+          <p>:</p>
+        </div>
+      
+        <!-- SECOND -->
+        <div>
+          <p class="placeholder">{{secondNext}}</p>
+        </div>
+      
+        <div>
+          <p>:</p>
+        </div>
+      
+        <!-- MILISECOND -->
+        <div>
+          <p class="placeholder">{{miliSecond}}</p>
+        </div>
+      </div>
+  </section>

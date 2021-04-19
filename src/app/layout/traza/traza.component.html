@@ -1,0 +1,7 @@
+<button mat-button color="primary" routerLink="/layout">Regresar al inicio</button>
+<div fxLayout="column" fxLayoutGap="32px">
+    <h1 style="text-align: center;">{{notice?.title}}</h1>
+    <h2 style="text-align: center;">Author: {{notice?.author}}</h2>
+    <img mat-card-image src={{notice?.urlToImage}}>
+   <p>{{notice?.description}}</p>
+ </div>

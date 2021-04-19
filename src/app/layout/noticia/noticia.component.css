@@ -1,0 +1,17 @@
+.example-card {
+    /*max-width: 400px;*/
+  }
+
+  .example-viewport {
+    height: 1000px;
+    width: 1000px;
+    border: 1px solid black;
+  }
+  
+  .example-item-detail {
+    height: 18px;
+  }
+  
+  .example-alternate {
+    background: rgba(127, 127, 127, 0.3);
+  }
